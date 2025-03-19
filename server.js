@@ -4,6 +4,10 @@ import morgan from "morgan";
 const app = express();
 const PORT = 8000;
 
+// Mongo DB
+import { connectMongoDB } from "./src/config/dbConfig.js";
+connectMongoDB();
+
 app.listen(PORT, (error) => {
   error
     ? console.log("Error running the server")
